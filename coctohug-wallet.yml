@@ -22,7 +22,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+              cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-aedge:/root/.chia
@@ -44,7 +44,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-apple:/root/.chia
@@ -66,7 +66,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-avocado:/root/.chia
@@ -88,7 +88,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-btcgreen:/root/.chia
@@ -110,7 +110,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-cactus:/root/.chia
@@ -132,7 +132,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-cannabis:/root/.chia
@@ -154,7 +154,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-chaingreen:/root/.chia
@@ -176,7 +176,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-chia:/root/.chia
@@ -198,7 +198,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-chives:/root/.chia
@@ -220,7 +220,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-covid:/root/.chia
@@ -242,7 +242,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-cryptodoge:/root/.chia
@@ -264,7 +264,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-dogechia:/root/.chia
@@ -286,7 +286,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-ethgreen:/root/.chia
@@ -308,7 +308,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-flax:/root/.chia
@@ -330,7 +330,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-flora:/root/.chia
@@ -352,7 +352,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-fork:/root/.chia
@@ -374,7 +374,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-goji:/root/.chia
@@ -396,7 +396,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-greendoge:/root/.chia
@@ -418,7 +418,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-hddcoin:/root/.chia
@@ -440,7 +440,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-kale:/root/.chia
@@ -462,7 +462,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-lucky:/root/.chia
@@ -484,7 +484,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-maize:/root/.chia
@@ -506,7 +506,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-melati:/root/.chia
@@ -528,7 +528,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-mint:/root/.chia
@@ -550,7 +550,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-mogua:/root/.chia
@@ -572,7 +572,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-nchain:/root/.chia
@@ -594,7 +594,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-pipscoin:/root/.chia
@@ -616,7 +616,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-rose:/root/.chia
@@ -638,7 +638,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-salvia:/root/.chia
@@ -660,7 +660,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-scam:/root/.chia
@@ -682,7 +682,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-sector:/root/.chia
@@ -704,7 +704,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-seno:/root/.chia
@@ -726,7 +726,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-shibgreen:/root/.chia
@@ -748,7 +748,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-silicoin:/root/.chia
@@ -770,7 +770,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-skynet:/root/.chia
@@ -792,7 +792,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-socks:/root/.chia
@@ -814,7 +814,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-spare:/root/.chia
@@ -836,7 +836,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-staicoin:/root/.chia
@@ -858,7 +858,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-stor:/root/.chia
@@ -880,7 +880,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-taco:/root/.chia
@@ -902,7 +902,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-tad:/root/.chia
@@ -924,7 +924,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-tranzact:/root/.chia
@@ -946,7 +946,7 @@ services:
     deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-venidium:/root/.chia
@@ -968,7 +968,7 @@ services:
       deploy:
         resources:
           limits:
-          cpus: 2
+            cpus: 2
     volumes:
       - /mnt/db/.coctohug:/root/.coctohug
       - /mnt/db/.coctohug-wheat:/root/.chia
