@@ -1,0 +1,986 @@
+version: '3.7'
+services:
+  coctohug-web:
+    image: raingggg/coctohug-web:develop
+    container_name: coctohug-web
+    
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-web:/root/.coctohug-web
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12630:12630
+
+  coctohug-aedge:
+    image: raingggg/coctohug-aedge:develop
+    container_name: coctohug-aedge
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-aedge:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12654:12654
+      - 8956:8956
+      - 8959:8959
+
+  coctohug-apple:
+    image: raingggg/coctohug-apple:develop
+    container_name: coctohug-apple
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-apple:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12655:12655
+      - 26666:26666
+      - 26667:26667
+
+  coctohug-avocado:
+    image: raingggg/coctohug-avocado:develop
+    container_name: coctohug-avocado
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-avocado:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12667:12667
+      - 6865:6865
+      - 6868:6868
+
+  coctohug-btcgreen:
+    image: raingggg/coctohug-btcgreen:develop
+    container_name: coctohug-btcgreen
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-btcgreen:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12650:12650
+      - 18655:18655
+      - 9282:9282
+
+  coctohug-cactus:
+    image: raingggg/coctohug-cactus:develop
+    container_name: coctohug-cactus
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-cactus:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12647:12647
+      - 11444:11444
+      - 11447:11447
+
+  coctohug-cannabis:
+    image: raingggg/coctohug-cannabis:develop
+    container_name: coctohug-cannabis
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-cannabis:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12669:12669
+      - 5444:5444
+      - 5547:5547
+
+  coctohug-chaingreen:
+    image: raingggg/coctohug-chaingreen:develop
+    container_name: coctohug-chaingreen
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-chaingreen:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12678:12678
+      - 8744:8744
+      - 8777:8777
+
+  coctohug-chia:
+    image: raingggg/coctohug-chia:develop
+    container_name: coctohug-chia
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-chia:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12664:12664
+      - 8447:8447
+      - 8444:8444
+
+  coctohug-chives:
+    image: raingggg/coctohug-chives:develop
+    container_name: coctohug-chives
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-chives:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12666:12666
+      - 9699:9699
+      - 9647:9647
+
+  coctohug-covid:
+    image: raingggg/coctohug-covid:develop
+    container_name: coctohug-covid
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-covid:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12641:12641
+      - 18120:18120
+      - 18129:18129
+
+  coctohug-cryptodoge:
+    image: raingggg/coctohug-cryptodoge:develop
+    container_name: coctohug-cryptodoge
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-cryptodoge:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12636:12636
+      - 15994:15994
+      - 16895:16895
+
+  coctohug-dogechia:
+    image: raingggg/coctohug-dogechia:develop
+    container_name: coctohug-dogechia
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-dogechia:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12657:12657
+      - 42069:42069
+      - 6969:6969
+
+  coctohug-ethgreen:
+    image: raingggg/coctohug-ethgreen:develop
+    container_name: coctohug-ethgreen
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-ethgreen:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12649:12649
+      - 6262:6262
+      - 6258:6258
+
+  coctohug-flax:
+    image: raingggg/coctohug-flax:develop
+    container_name: coctohug-flax
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-flax:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12653:12653
+      - 6888:6888
+      - 6885:6885
+
+  coctohug-flora:
+    image: raingggg/coctohug-flora:develop
+    container_name: coctohug-flora
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-flora:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12632:12632
+      - 18644:18644
+      - 18647:18647
+
+  coctohug-fork:
+    image: raingggg/coctohug-fork:develop
+    container_name: coctohug-fork
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-fork:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12673:12673
+      - 3675:3675
+      - 16625:16625
+
+  coctohug-goji:
+    image: raingggg/coctohug-goji:develop
+    container_name: coctohug-goji
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-goji:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12676:12676
+      - 7447:7447
+      - 7444:7444
+
+  coctohug-greendoge:
+    image: raingggg/coctohug-greendoge:develop
+    container_name: coctohug-greendoge
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-greendoge:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12638:12638
+      - 6544:6544
+      - 6547:6547
+
+  coctohug-hddcoin:
+    image: raingggg/coctohug-hddcoin:develop
+    container_name: coctohug-hddcoin
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-hddcoin:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12651:12651
+      - 28444:28444
+      - 28447:28447
+
+  coctohug-kale:
+    image: raingggg/coctohug-kale:develop
+    container_name: coctohug-kale
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-kale:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12668:12668
+      - 6333:6333
+      - 6335:6335
+
+  coctohug-lucky:
+    image: raingggg/coctohug-lucky:develop
+    container_name: coctohug-lucky
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-lucky:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12642:12642
+      - 16664:16664
+      - 16667:16667
+
+  coctohug-maize:
+    image: raingggg/coctohug-maize:develop
+    container_name: coctohug-maize
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-maize:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12652:12652
+      - 8644:8644
+      - 8647:8647
+
+  coctohug-melati:
+    image: raingggg/coctohug-melati:develop
+    container_name: coctohug-melati
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-melati:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12670:12670
+      - 2444:2444
+      - 2447:2447
+
+  coctohug-mint:
+    image: raingggg/coctohug-mint:develop
+    container_name: coctohug-mint
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-mint:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12662:12662
+      - 29222:29222
+      - 29227:29227
+
+  coctohug-mogua:
+    image: raingggg/coctohug-mogua:develop
+    container_name: coctohug-mogua
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-mogua:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12661:12661
+      - 6999:6999
+      - 6330:6330
+
+  coctohug-nchain:
+    image: raingggg/coctohug-nchain:develop
+    container_name: coctohug-nchain
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-nchain:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12665:12665
+      - 58445:58445
+      - 38447:38447
+
+  coctohug-pipscoin:
+    image: raingggg/coctohug-pipscoin:develop
+    container_name: coctohug-pipscoin
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-pipscoin:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12640:12640
+      - 7477:7477
+      - 16339:16339
+
+  coctohug-rose:
+    image: raingggg/coctohug-rose:develop
+    container_name: coctohug-rose
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-rose:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12675:12675
+      - 8520:8520
+      - 8547:8547
+
+  coctohug-salvia:
+    image: raingggg/coctohug-salvia:develop
+    container_name: coctohug-salvia
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-salvia:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12663:12663
+      - 18520:18520
+      - 18523:18523
+
+  coctohug-scam:
+    image: raingggg/coctohug-scam:develop
+    container_name: coctohug-scam
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-scam:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12672:12672
+      - 9777:9777
+      - 9775:9775
+
+  coctohug-sector:
+    image: raingggg/coctohug-sector:develop
+    container_name: coctohug-sector
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-sector:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12671:12671
+      - 5765:5765
+      - 5447:5447
+
+  coctohug-seno:
+    image: raingggg/coctohug-seno:develop
+    container_name: coctohug-seno
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-seno:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12674:12674
+      - 18447:18447
+      - 18444:18444
+
+  coctohug-shibgreen:
+    image: raingggg/coctohug-shibgreen:develop
+    container_name: coctohug-shibgreen
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-shibgreen:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12648:12648
+      - 18974:18974
+      - 7442:7442
+
+  coctohug-silicoin:
+    image: raingggg/coctohug-silicoin:develop
+    container_name: coctohug-silicoin
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-silicoin:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12645:12645
+      - 22222:22222
+      - 10447:11447
+
+  coctohug-skynet:
+    image: raingggg/coctohug-skynet:develop
+    container_name: coctohug-skynet
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-skynet:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12643:12643
+      - 9999:9999
+      - 9998:9998
+
+  coctohug-socks:
+    image: raingggg/coctohug-socks:develop
+    container_name: coctohug-socks
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-socks:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12660:12660
+      - 58444:58444
+      - 58447:58447
+
+  coctohug-spare:
+    image: raingggg/coctohug-spare:develop
+    container_name: coctohug-spare
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-spare:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12677:12677
+      - 9444:9444
+      - 9447:9447
+
+  coctohug-staicoin:
+    image: raingggg/coctohug-staicoin:develop
+    container_name: coctohug-staicoin
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-staicoin:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12639:12639
+      - 1999:1999
+      - 1692:1692
+
+  coctohug-stor:
+    image: raingggg/coctohug-stor:develop
+    container_name: coctohug-stor
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-stor:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12646:12646
+      - 8668:8668
+      - 8337:8337
+
+  coctohug-taco:
+    image: raingggg/coctohug-taco:develop
+    container_name: coctohug-taco
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-taco:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12659:12659
+      - 18620:18620
+      - 18623:18623
+
+  coctohug-tad:
+    image: raingggg/coctohug-tad:develop
+    container_name: coctohug-tad
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-tad:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12658:12658
+      - 4044:4044
+      - 4447:4447
+
+  coctohug-tranzact:
+    image: raingggg/coctohug-tranzact:develop
+    container_name: coctohug-tranzact
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-tranzact:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12637:12637
+      - 8652:8652
+      - 8655:8655
+
+  coctohug-venidium:
+    image: raingggg/coctohug-venidium:develop
+    container_name: coctohug-venidium
+    deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-venidium:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12644:12644
+      - 5744:5744
+      - 5747:5747
+
+  coctohug-wheat:
+    image: raingggg/coctohug-wheat:develop
+    container_name: coctohug-wheat
+      deploy:
+        resources:
+          limits:
+          cpus: 2
+    volumes:
+      - /mnt/db/.coctohug:/root/.coctohug
+      - /mnt/db/.coctohug-wheat:/root/.chia
+      - /mnt:/plots1
+    environment:
+      - TZ=America/Los_Angeles
+      - mode=wallet
+      - controller_address=192.168.1.15
+      - worker_address=192.168.1.15
+      - plots_dir=/plots1
+    ports:
+      - 12656:12656
+      - 21333:21333
+      - 21447:21447
+
